@@ -139,7 +139,7 @@ func main() {
   - `%f` = float
     - `fmt.Printf("Version: %f", 1.23)` → `Version: 1.230000`
     - `fmt.Printf("Version: %.1f", 1.23)` → `Version: 1.2`
-    - `fmt.Printf("Version: %02.2f", 1.23)` → `Version: 01.23`
+    - `fmt.Printf("Version: %05.2f", 1.23)` → `Version: 01.23`
   - `%t` = boolean
   - `%d` = integer
 
