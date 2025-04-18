@@ -48,24 +48,24 @@ go run hello.go
 
 #### `package main`
 
-- In Go, ***everything must belong to a package***.
-- `main` is a *special* package name — it's the one that ***makes a standalone executable***.
+- In Go, **everything must belong to a package**.
+- `main` is a *special* package name — it's the one that **makes a standalone executable**.
 - If you were writing a library to be imported by other code, you’d use a different package name (like `package mymath` or `package taskmanager`).
-- But ***if you want to run your program***, it must be in `package main`.
+- But **if you want to run your program**, it must be in `package main`.
 
 Think of `package main` like saying *"this is a full program you can build and run"*,
 versus *"this is just a piece of code meant to be reused by other programs"*.
 
 ### `func main()`
 
-- `func main()` is ***the entry point*** of a Go application — the first thing Go calls when the program runs.
+- `func main()` is **the entry point** of a Go application — the first thing Go calls when the program runs.
 - It's *required* in `package main`.
 - Without it, Go will compile the file (if you run `go build`), but it won’t know what to do — it'll error if you try to `go run` it.
 
 It's like the `main()` method in C or Java — the spot where your program officially *starts*.
 
-- You ***can*** define other functions outside of `main()` and call them from `main()`.
-- But `main()` ***must exist*** in an executable Go program.
+- You **can** define other functions outside of `main()` and call them from `main()`.
+- But `main()` **must exist** in an executable Go program.
 - If you were writing a library (package other than `main`), you wouldn’t have a `func main()` at all.
 
 ---
@@ -74,12 +74,12 @@ It's like the `main()` method in C or Java — the spot where your program offic
 
 ### Concepts
 
-Go is strongly typed, but also wants to keep things ***concise*** when it can figure types out for you.
+Go is strongly typed, but also wants to keep things **concise** when it can figure types out for you.
 
 #### Variable Declaration
 
-- `var` is explicit ***variable declaration***.
-- You have to tell Go the ***type*** (`string`, `float32`, etc.) unless it can infer it.
+- `var` is explicit **variable declaration**.
+- You have to tell Go the **type** (`string`, `float32`, etc.) unless it can infer it.
 
 ```go
 var name string = "Task Manager"
@@ -88,9 +88,9 @@ var version float32 = 0.1
 
 #### Short Declaration
 
-- `:=` is ***short variable declaration***.
+- `:=` is **short variable declaration**.
 - It lets Go *infer* the type from the value.
-- Only available ***inside functions*** (can’t use it at the top level of a file).
+- Only available **inside functions** (can’t use it at the top level of a file).
 
 ```go
 isReleased := false
@@ -98,12 +98,14 @@ isReleased := false
 
 #### Constants
 
-- `const` is for ***unchanging values***.
+- `const` is for **unchanging values**.
 - Good habit: constants for things that are “fixed settings” of the program (like maximum limits, API URLs, etc).
 
 ```go
 const maxTasks = 100
 ```
+
+> In Go, you must use all declared variables unless you intentionally ignore them with `_`.
 
 ### Practice
 
