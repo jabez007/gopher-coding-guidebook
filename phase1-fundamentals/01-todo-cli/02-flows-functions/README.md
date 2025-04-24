@@ -21,7 +21,7 @@
 - **For Loop**: Repeat actions with a loop.
   - `for` is the only loop keyword in Go — `while` and `do-while` do not exist.
 - **Switch Statement**: Handle multiple possible conditions more cleanly than multiple `if-else` `if-else` statements.
-  - The `switch` statement automatically breaks after each case (no `break` keyword needed like in Python or JavaScript).
+  - The `switch` statement automatically breaks after each case (no `break` keyword needed like in JavaScript).
   - Instead Go has the `fallthrough` keyword which allows one condition to execute multiple cases (similar to not using `break` or `return` in JavaScript).
   - Go also allows switch statements without a condition, which is equivalent to switch true. This can be used over long if-else chains for complex conditions.
 
