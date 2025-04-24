@@ -5,13 +5,16 @@ import (
 	"math/rand"
 )
 
-// Function with parameters and return value
+// addTask creates a new task with the given title and priority.
+// It returns a confirmation message and a randomly generated task ID.
 func addTask(title string, priority int) (string, int) {
 	return fmt.Sprintf("Added task: %s (priority: %d)", title, priority), rand.Intn(10)
 }
 
-// Function with multiple return values
-func completeTask(id int) (bool, string) {
+// completeTask marks the task with the given ID as completed.
+// It returns success (true if the operation was successful) and
+// a message (either a success message or an error description).
+func completeTask(id int) (success bool, message string) {
 	if id <= 0 {
 		return false, "Invalid task ID"
 	}
