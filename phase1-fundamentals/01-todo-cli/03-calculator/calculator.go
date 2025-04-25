@@ -25,6 +25,33 @@ func divide(a, b float64) (float64, error) {
 	return a / b, nil
 }
 
+func parseArgs(args []string) (float64, float64, string, error) {
+	var num1, num2 float64
+	var operation string
+	var err error
+
+	// Try first format: <number> <operation> <number>
+	num1, err = strconv.ParseFloat(args[1], 64)
+	if err != nil {
+		// Try second format: <operation> <number> <number>
+		operation = args[1]
+		num1, err = strconv.ParseFloat(args[2], 64)
+		if err != nil {
+			return 0, 0, "", fmt.Errorf("error parsing first number: %v", err)
+		}
+	} else {
+		operation = args[2]
+	}
+
+	// Parse second number
+	num2, err = strconv.ParseFloat(args[3], 64)
+	if err != nil {
+		return 0, 0, "", fmt.Errorf("error parsing second number: %v", err)
+	}
+
+	return num1, num2, operation, nil
+}
+
 func main() {
 	// fmt.Printf("%s", os.Args)
 
@@ -34,31 +61,9 @@ func main() {
 		os.Exit(1)
 	}
 
-	var num1, num2 float64
-	var operation string
-	var err error
-
-	// Parse first number
-	num1, err = strconv.ParseFloat(os.Args[1], 64)
+	num1, num2, operation, err := parseArgs(os.Args)
 	if err != nil {
-		// maybe we have the operation first e.g. add 2 2
-		operation = os.Args[1]
-
-		// try to find the first number elsewhere
-		num1, err = strconv.ParseFloat(os.Args[2], 64)
-		if err != nil {
-			fmt.Println("Error parsing first number:", err)
-			os.Exit(1)
-		}
-	} else {
-		// Get operation
-		operation = os.Args[2]
-	}
-
-	// Parse second number
-	num2, err = strconv.ParseFloat(os.Args[3], 64)
-	if err != nil {
-		fmt.Println("Error parsing second number:", err)
+		fmt.Println(err)
 		os.Exit(1)
 	}
 
@@ -70,19 +75,13 @@ func main() {
 	case "add":
 		result = add(num1, num2)
 		fmt.Printf("%.2f + %.2f = %.2f\n", num1, num2, result)
-	case "-":
-		fallthrough
-	case "sub":
+	case "-", "sub":
 		result = subtract(num1, num2)
 		fmt.Printf("%.2f - %.2f = %.2f\n", num1, num2, result)
-	case "*":
-		fallthrough
-	case "mul":
+	case "*", "mul":
 		result = multiply(num1, num2)
 		fmt.Printf("%.2f * %.2f = %.2f\n", num1, num2, result)
-	case "/":
-		fallthrough
-	case "div":
+	case "/", "div":
 		result, err = divide(num1, num2)
 		if err != nil {
 			fmt.Println("Error:", err)
