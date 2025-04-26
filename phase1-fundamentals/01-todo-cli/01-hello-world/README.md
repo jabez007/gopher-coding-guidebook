@@ -9,18 +9,18 @@
 ## Setup Instructions
 
 1. Install Go
-  - Download from golang.org/dl
-  - Follow installation instructions for your OS
-  - Verify installation: `go version`
+   - Download from golang.org/dl
+   - Follow installation instructions for your OS
+   - Verify installation: `go version`
 2. Set up your editor
-  - VSCode with Go extension recommended
-  - GoLand is a great alternative if available
-  - Configure Go tools: `go install golang.org/x/tools/...@latest`
+   - VSCode with Go extension recommended
+   - GoLand is a great alternative if available
+   - Configure Go tools: `go install golang.org/x/tools/...@latest`
 3. Create a workspace
-  ```bash
-  mkdir -p ~/go-task-manager/hello
-  cd ~/go-task-manager/hello
-  ```
+   ```bash
+   mkdir -p ~/go-task-manager/hello
+   cd ~/go-task-manager/hello
+   ```
 
 ---
 

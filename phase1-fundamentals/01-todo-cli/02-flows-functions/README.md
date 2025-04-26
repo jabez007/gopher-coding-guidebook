@@ -23,7 +23,7 @@
 - **Switch Statement**: Handle multiple possible conditions more cleanly than multiple `if-else` `if-else` statements.
   - The `switch` statement automatically breaks after each case (no `break` keyword needed like in JavaScript).
   - Instead Go has the `fallthrough` keyword which allows one condition to execute multiple cases (similar to not using `break` or `return` in JavaScript).
-  - Go also allows switch statements without a condition, which is equivalent to switch true. This can be used over long if-else chains for complex conditions.
+  - Go also allows `switch` statements without a condition, which is equivalent to `switch true`. This can be used over long `if-else` chains for complex conditions.
 
 ### Functions
 
@@ -40,26 +40,26 @@ Write a small program that uses `if-else`, `for`, and `switch` to control the fl
 1. Create a file named `control.go`
 2. Start by writing a main function inside the main package.
 3. Inside the `main` function:
-  - **If-Else Statement**:
-    - Define a variable `taskCount` and assign it a number (e.g., `5`).
-    - Write an `if-else` `if-else` block:
-      - If `taskCount == 0`, print "No tasks".
-      - If `taskCount == 1`, print "1 task".
-      - Otherwise, print "{taskCount} tasks".
-  - **For Loop**:
-    - print "Listing tasks:".
-    - use a `for` loop to print each task, e.g. "Task 1", "Task 2", up to `taskCount`.
-  - **Switch Statement**:
-    - Define a variable `priority` with a value like `"high"`.
-    - Write a `switch` statement:
-      - If `priority` is `"low"`, print "Low priority".
-      - If `priority` is `"medium"`, print "Medium priority".
-      - If `priority` is `"high"`, print "High priority".
-      - Otherwise, print "Unknown priority".
+   - **If-Else Statement**:
+     - Define a variable `taskCount` and assign it a number (e.g., `5`).
+     - Write an `if-else` `if-else` block:
+       - If `taskCount == 0`, print "No tasks".
+       - If `taskCount == 1`, print "1 task".
+       - Otherwise, print "{taskCount} tasks".
+   - **For Loop**:
+     - print "Listing tasks:".
+     - use a `for` loop to print each task, e.g. "Task 1", "Task 2", up to `taskCount`.
+   - **Switch Statement**:
+     - Define a variable `priority` with a value like `"high"`.
+     - Write a `switch` statement:
+       - If `priority` is `"low"`, print "Low priority".
+       - If `priority` is `"medium"`, print "Medium priority".
+       - If `priority` is `"high"`, print "High priority".
+       - Otherwise, print "Unknown priority".
 4. Save and run your program:
-  ```bash
-  go run control.go
-  ```
+   ```bash
+   go run control.go
+   ```
 
 ### BONUS
 
@@ -115,28 +115,28 @@ Create reusable functions for working with tasks.
 
 1. Create a file named `functions.go`:
 2. Define two functions above the `main` function:
-  - `addTask` **function**:
-    - Accepts two parameters: a `string` (title) and an `int` (priority).
-    - Returns a single `string` that says: `"Added task: {title} (priority: {priority})"`.
-  - `completeTask` **function**:
-    - Accepts one parameter: an `int` (id).
-    - Returns **two values**:
-      - A `bool`: `true` if `id` is greater than 0, otherwise `false`.
-      - A `string`: either "Task {id} completed" or "Invalid task ID".
+   - `addTask` **function**:
+     - Accepts two parameters: a `string` (title) and an `int` (priority).
+     - Returns a single `string` that says: `"Added task: {title} (priority: {priority})"`.
+   - `completeTask` **function**:
+     - Accepts one parameter: an `int` (id).
+     - Returns **two values**:
+       - A `bool`: `true` if `id` is greater than 0, otherwise `false`.
+       - A `string`: either "Task {id} completed" or "Invalid task ID".
 3. Inside your `main` function:
-  - Call `addTask("Learn Go", 1)` and print the returned message.
-  - Call `completeTask(1)`:
-    - Capture both return values (`success`, `message`).
-    - If `success` is `true`, print the message.
-    - Otherwise, print `"Error: {message}"`.
-  - Demonstrate ignoring a return value:
-    - Call `completeTask(0)`.
-    - Ignore the second return value using `_` (underscore).
-    - Just print whether `success` is `true` or `false`.
+   - Call `addTask("Learn Go", 1)` and print the returned message.
+   - Call `completeTask(1)`:
+     - Capture both return values (`success`, `message`).
+     - If `success` is `true`, print the message.
+     - Otherwise, print `"Error: {message}"`.
+   - Demonstrate ignoring a return value:
+     - Call `completeTask(0)`.
+     - Ignore the second return value using `_` (underscore).
+     - Just print whether `success` is `true` or `false`.
 4. Save and run your program:
-  ```bash
-  go run functions.go
-  ```
+   ```bash
+   go run functions.go
+   ```
 
 ### BONUS
 
