@@ -2,19 +2,19 @@
 
 Learn basic Go syntax and types by building a simple command-line todo app.
 
-## Learning Goals
+## 🏆 Learning Goals
 
 - Understand Go project structure and package management
 - Work with slices, maps, and structs
 - Use functions and error handling
 - Write simple CLI input/output logic
 
-## Prerequisites
+## ⚠️ Prerequisites
 
 - Go installed (1.20+)
 - Familiarity with a terminal and basic CLI usage
 
-## Task List
+## ✅ Task List
 
 - [ ] Initialize a Go module
 - [ ] Define a `Task` struct
@@ -23,13 +23,13 @@ Learn basic Go syntax and types by building a simple command-line todo app.
 - [ ] Parse user input from command line args
 - [ ] Save/load tasks from a JSON file (optional)
 
-## Stretch Goals
+## 🚀 Stretch Goals
 
 - [ ] Add support for task deadlines or priorities
 - [ ] Improve UX with colored output
 - [ ] Implement simple tests using Go's `testing` package
 
-## Helpful Resources
+## 🗺️ Helpful Resources
 
 - https://go.dev/doc/tutorial/create-module
 - https://gobyexample.com

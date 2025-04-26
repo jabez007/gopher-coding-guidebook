@@ -6,13 +6,13 @@ The learning path is divided into three progressive phases:
 
 ## 📚 Phases
 
-### Phase 1: Go Fundamentals
+### 🌓 Phase 1: Go Fundamentals
 Small, focused CLI projects to get hands-on with Go syntax, tooling, and concurrency.
 
-### Phase 2: RESTful Microservices
+### 🌕 Phase 2: RESTful Microservices
 Build a REST API, connect it to a database, and containerize it for Kubernetes.
 
-### Phase 3: gRPC Microservices
+### 🌗 Phase 3: gRPC Microservices
 Dive into Protocol Buffers, gRPC service definitions, streaming, and authentication.
 
 ## 🧰 Prerequisites
