@@ -6,9 +6,9 @@ The calculator must accept either:
   or
 - **word commands**: (`add`, `subtract`, `multiply`, `divide`).
 
-Accepting both formats is bonus points!
+> 🔥 Accepting both formats is bonus points!
 
-## Requirements
+## ✏️ Requirements
 
 - Your program must be a single file: `calculator.go`
 - It must accept command-line arguments to perform a calculation between two numbers.
@@ -33,7 +33,7 @@ Accepting both formats is bonus points!
   - Unknown operations
   - Division by zero
 
-## Examples
+## 🖥️ Examples
 
 | Command                         | Output |
 |---------------------------------|--------|
@@ -46,7 +46,7 @@ Accepting both formats is bonus points!
 | `go run calculator.go mul 10 5`	| 50     |
 | `go run calculator.go div 10 5`	| 2      |
 
-## Bonus Opportunities
+## 🔥 Bonus Opportunities
 
 - Support **both** symbolic and word-based operations.
 - Allow reversed arguments (operation first), like:
@@ -55,7 +55,7 @@ Accepting both formats is bonus points!
   ```
 - Support **decimals** (use `float64` instead of `int`).
 
-## Hints
+## 🔍 Hints
 
 - Use `os.Args` to access command-line arguments.
 - Use `strconv.Atoi()` or `strconv.ParseFloat()` to convert string arguments to numbers.

@@ -1,12 +1,12 @@
 # Go Installation & First Program
 
-## Objectives
+## 🎯 Objectives
 
 - Set up Go development environment
 - Understand Go's basic syntax and structure
 - Write your first Go program
 
-## Setup Instructions
+## 📋 Setup Instructions
 
 1. Install Go
    - Download from golang.org/dl
@@ -44,9 +44,9 @@ Run it:
 go run hello.go
 ```
 
-### Key pieces
+### 🧩 Key pieces
 
-#### `package main`
+#### 🔹 `package main`
 
 - In Go, **everything must belong to a package**.
 - `main` is a *special* package name — it's the one that **makes a standalone executable**.
@@ -56,7 +56,7 @@ go run hello.go
 Think of `package main` like saying *"this is a full program you can build and run"*,
 versus *"this is just a piece of code meant to be reused by other programs"*.
 
-### `func main()`
+#### 🔹 `func main()`
 
 - `func main()` is **the entry point** of a Go application — the first thing Go calls when the program runs.
 - It's *required* in `package main`.
@@ -72,11 +72,11 @@ It's like the `main()` method in C or Java — the spot where your program offic
 
 ## ✨ Exercise 2
 
-### Concepts
+### 🧠 Concepts
 
 Go is strongly typed, but also wants to keep things **concise** when it can figure types out for you.
 
-#### Variable Declaration
+#### 🔹 Variable Declaration
 
 - `var` is explicit **variable declaration**.
 - You have to tell Go the **type** (`string`, `float32`, etc.) unless it can infer it.
@@ -86,7 +86,7 @@ var name string = "Task Manager"
 var version float32 = 0.1
 ```
 
-#### Short Declaration
+#### 🔹 Short Declaration
 
 - `:=` is **short variable declaration**.
 - It lets Go *infer* the type from the value.
@@ -96,7 +96,7 @@ var version float32 = 0.1
 isReleased := false
 ```
 
-#### Constants
+#### 🔹 Constants
 
 - `const` is for **unchanging values**.
 - Good habit: constants for things that are “fixed settings” of the program (like maximum limits, API URLs, etc).
@@ -105,9 +105,9 @@ isReleased := false
 const maxTasks = 100
 ```
 
-> In Go, you must use all declared variables unless you intentionally ignore them with `_`.
+> ❓ In Go, you must use all declared variables unless you intentionally ignore them with `_`.
 
-### Practice
+### 🛠️ Practice
 
 Create a file named `variables.go`:
 
@@ -134,12 +134,17 @@ func main() {
 }
 ```
 
-- `fmt.Printf` uses formatting verbs like `%s`, `%f`, `%t`, `%d`.
-  - `%s` = string
-  - `%f` = float
-    - `fmt.Printf("Version: %f", 1.23)` → `Version: 1.230000`
-    - `fmt.Printf("Version: %.1f", 1.23)` → `Version: 1.2`
-    - `fmt.Printf("Version: %05.2f", 1.23)` → `Version: 01.23`
-  - `%t` = boolean
-  - `%d` = integer
+> 🔍 `fmt.Printf` Formatting Verbs
+> When you use `fmt.Printf`, the **format string** (inside quotes) can contain **verbs** — special placeholders that start with `%` — and they tell Go how to format the value you pass in.
+> Each verb is specific to a type of data.
+> - `fmt.Printf` uses formatting verbs like `%s`, `%f`, `%t`, `%d`.
+>   - `%s` = string
+>   - `%f` = float
+>     - `fmt.Printf("Version: %f", 1.23)` → `Version: 1.230000`
+>     - `fmt.Printf("Version: %.1f", 1.23)` → `Version: 1.2`
+>     - `fmt.Printf("Version: %05.2f", 1.23)` → `Version: 01.23`
+>   - `%t` = boolean
+>   - `%d` = integer
+>   - `%v` = any type
+>     - Quick way to print anything (value)
 

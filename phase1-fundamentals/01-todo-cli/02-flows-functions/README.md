@@ -1,6 +1,6 @@
 # Control Flow & Functions
 
-## Objectives
+## 🎯 Objectives
 
 - Learn about control structures in Go
   - `if-else`
@@ -13,9 +13,9 @@
   - Work with multiple return values in Go functions
   - Handle unused return values properly
 
-## Concepts
+## 🧠 Concepts
 
-### Control Structures
+### 🔹 Control Structures
 
 - **If-Else**: Make decisions based on conditions.
 - **For Loop**: Repeat actions with a loop.
@@ -25,7 +25,7 @@
   - Instead Go has the `fallthrough` keyword which allows one condition to execute multiple cases (similar to not using `break` or `return` in JavaScript).
   - Go also allows `switch` statements without a condition, which is equivalent to `switch true`. This can be used over long `if-else` chains for complex conditions.
 
-### Functions
+### 🔹 Functions
 
 - Define reusable blocks of code.
 - Functions can take **parameters** and return **one or multiple values**.
@@ -33,7 +33,7 @@
 
 ---
 
-## Exercise 1
+## ✏️ Exercise 1
 
 Write a small program that uses `if-else`, `for`, and `switch` to control the flow of execution.
 
@@ -61,7 +61,7 @@ Write a small program that uses `if-else`, `for`, and `switch` to control the fl
    go run control.go
    ```
 
-### BONUS
+### 🔥 BONUS
 
 Change taskCount dynamically — e.g., ask the user to input the task count using fmt.Scanln().
 
@@ -109,7 +109,7 @@ Change taskCount dynamically — e.g., ask the user to input the task count usin
 
 ---
 
-## Exercise 2
+## ✏️ Exercise 2
 
 Create reusable functions for working with tasks.
 
@@ -138,7 +138,7 @@ Create reusable functions for working with tasks.
    go run functions.go
    ```
 
-### BONUS
+### 🔥 BONUS
 
 - Modify `addTask` to assign a unique ID to each task.
 - Create a `deleteTask(id int)` function that returns a message indicating if the deletion was successful.
@@ -183,3 +183,12 @@ Create reusable functions for working with tasks.
       fmt.Println("Task completed:", success)
   }
   ```
+
+---
+
+## 💡 Notes & Tips
+
+- Remember, in Go **you must use** all variables unless you ignore them with `_`.
+- `for` is the **only loop keyword** — there is no `while` or `do-while`.
+- In `switch`, *8you don't need to add** `break` after each case — it auto-breaks.
+- Functions can **return multiple values** natively — no need for special objects or structures.

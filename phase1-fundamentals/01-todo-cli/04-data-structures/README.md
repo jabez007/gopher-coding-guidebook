@@ -3,7 +3,7 @@
 This lesson introduces Go’s core data structures: arrays, slices, maps, and structs.
 You'll learn how to use them in real-world scenarios and build a custom `Task` struct that forms the foundation for a CLI-based task manager.
 
-## Objectives
+## 🎯 Objectives
 
 By the end of this lesson, you will:
 - Understand the syntax and characteristics of arrays, slices, and maps in Go
@@ -11,7 +11,7 @@ By the end of this lesson, you will:
 - Use methods (including pointer receivers) with structs
 - Begin building the data model for a CLI task manager
 
-## Exercise 1
+## ✏️ Exercise 1
 
 📁 *File*: `collections.go`
 
@@ -131,7 +131,7 @@ fmt.Printf("Length: %d, Capacity: %d\n", len(todoList), cap(todoList))
 
 ---
 
-## Exercise 2
+## ✏️ Exercise 2
 
 📁 *File*: `maps.go`
 
@@ -261,7 +261,7 @@ for id, status := range taskStatus {
 
 ---
 
-## Exercise 3
+## ✏️ Exercise 3
 
 📁 *File*: `structs.go`
 
