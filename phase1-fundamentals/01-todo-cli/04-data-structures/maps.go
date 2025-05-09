@@ -4,12 +4,20 @@ import (
 	"fmt"
 )
 
+// Define status constants
+const (
+	StatusNotStarted = "Not Started"
+	StatusInProgress = "In Progress"
+	StatusCompleted  = "Completed"
+	StatusBlocked    = "Blocked"
+)
+
 func main() {
 	// Create a map
 	taskStatus := map[int]string{
-		1: "Not Started",
-		2: "In Progress",
-		3: "Completed",
+		1: StatusNotStarted,
+		2: StatusInProgress,
+		3: StatusCompleted,
 	}
 
 	fmt.Println("Task statuses:", taskStatus)
@@ -26,7 +34,7 @@ func main() {
 	}
 
 	// Add a new key-value pair
-	taskStatus[4] = "Blocked"
+	taskStatus[4] = StatusBlocked
 	fmt.Println("Updated statuses:", taskStatus)
 
 	// Delete a key

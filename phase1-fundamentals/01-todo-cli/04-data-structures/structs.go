@@ -5,6 +5,13 @@ import (
 	"time"
 )
 
+// Priority levels
+const (
+	PriorityHigh   = 1
+	PriorityMedium = 2
+	PriorityLow    = 3
+)
+
 // Task struct definition
 type Task struct {
 	ID          int
@@ -12,7 +19,7 @@ type Task struct {
 	Description string
 	DueDate     time.Time
 	Completed   bool
-	Priority    int // 1: High, 2: Medium, 3: Low
+	Priority    int // See priority constants
 }
 
 // Method on Task struct
@@ -22,7 +29,9 @@ func (t Task) IsOverdue() bool {
 
 // Method that modifies the struct (pointer receiver)
 func (t *Task) Complete() {
-	t.Completed = true
+	if !t.Completed {
+		t.Completed = true
+	}
 }
 
 func main() {
@@ -52,9 +61,11 @@ func main() {
 	tasks := []Task{
 		task,
 		{
-			ID:       2,
-			Title:    "Build CLI app",
-			DueDate:  time.Now().Add(48 * time.Hour),
+			ID:    2,
+			Title: "Build CLI app",
+			// Description is missing and will be initialized to ""
+			DueDate: time.Now().Add(48 * time.Hour),
+			// Completed is missing and will be initialized to false
 			Priority: 2,
 		},
 	}
