@@ -4,12 +4,19 @@ import (
 	"fmt"
 )
 
+// Define priority constants
+const (
+	PriorityLow    = "Low"
+	PriorityMedium = "Medium"
+	PriorityHigh   = "High"
+)
+
 func main() {
 	// Arrays have fixed size
 	var priorities [3]string
-	priorities[0] = "Low"
-	priorities[1] = "Medium"
-	priorities[2] = "High"
+	priorities[0] = PriorityLow
+	priorities[1] = PriorityMedium
+	priorities[2] = PriorityHigh
 
 	fmt.Println("Priority levels:", priorities)
 	fmt.Println("Number of priorities:", len(priorities))
