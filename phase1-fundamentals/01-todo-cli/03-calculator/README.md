@@ -62,3 +62,79 @@ The calculator must accept either:
 - Use a `switch` statement to select the correct operation.
 - Check the number of arguments before running your code.
 - Print helpful error messages when something goes wrong.
+
+### 🧱 Project Setup with `go mod init`
+
+While this project is small enough to run without modules,
+you may find it helpful to initialize a Go module if you want to write tests or expand the project later.
+
+To create a Go module in your project directory, run:
+
+```bash
+go mod init calculator
+```
+
+This creates a go.mod file that tracks dependencies and lets you use packages and testing tools more effectively.
+
+#### 🤔 Wait, why initialize a CLI app as a module?
+
+Go modules are not just for publishing libraries — they are how **all Go projects are managed** now.
+
+Here's why using a module is useful **even for a CLI app**:
+
+1. **Tooling Support**  
+   Go tools like `go test`, `go get`, and even IDE features work best when a `go.mod` file is present.
+
+2. **Dependency Management**  
+   If you later decide to use a third-party package (for example, a math library or CLI parsing library), Go modules track and manage those dependencies for you.
+
+3. **Better Organization**  
+   Modules give your project a clear root directory. This helps Go understand what belongs to your project and what doesn't.
+
+4. **Testing Support**  
+   Writing and running tests is easier in a module-aware project. The `go test` command will know exactly what files and packages to test.
+
+5. **Future-Proofing**  
+   Today it’s a simple calculator — tomorrow it might become a full-featured app with subcommands and plugins. Starting with a module helps you scale up.
+
+The `go.mod` file tells Go that:
+    “This is the root of a Go project.”
+    “The module name is calculator.”
+
+> ✅ Good habit: Always run go mod init <name> when starting a new Go project.
+
+### 🧪 Writing Unit Tests in Go
+
+You can write tests by creating a file named `calculator_test.go` in the same directory.
+
+Here’s an example of how to test an `Add` function:
+
+```go
+// calculator_test.go
+package main
+
+import "testing"
+
+func TestAdd(t *testing.T) {
+    got := Add(10, 5)
+    want := 15
+
+    if got != want {
+        t.Errorf("Add(10, 5) = %v; want %v", got, want)
+    }
+}
+```
+
+To run tests:
+
+```bash
+go test
+```
+
+#### 💡 Test Tips
+
+- Test file names must end with `_test.go`.
+- Test functions must start with `Test` and accept `*testing.T`.
+- You can write helper functions like `Add`, `Subtract`, etc., in `calculator.go` to make testing easier.
+
+> 🔁 Refactor: If your logic is buried in main(), refactor the actual calculation into testable functions.
