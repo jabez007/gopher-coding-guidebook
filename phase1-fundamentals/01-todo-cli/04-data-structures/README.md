@@ -72,8 +72,31 @@ fmt.Printf("Length: %d, Capacity: %d\n", len(todoList), cap(todoList))
 ```
 
 > ⚙️ This creates an empty slice with capacity for 10 items.
-> There's no direct equivalent in JavaScript or Python, but it's like saying:
-> “Create an empty list that won’t need resizing until it hits 10 elements.”
+
+##### 🧠 About `make()`
+
+Go provides the `make()` function to create and initialize **only** slices, maps, and channels — types that need setup behind the scenes.
+
+When you use `make()` with a slice, you can specify both its **length** and **capacity**:
+
+```go
+slice := make([]string, length, capacity)
+```
+
+- **Length**: how many elements the slice currently contains (filled with zero values).
+- **Capacity**: how many elements it can hold *before* needing to resize the underlying array.
+
+```go
+todoList := make([]string, 0, 10)
+// Start with 0 items, but room for 10.
+```
+
+> 💡 Why use `make()`?
+> It’s useful when you know ahead of time that a slice will grow.
+> Preallocating space helps improve performance by reducing internal memory copying.
+
+> 🔍 There's no direct equivalent in JavaScript or Python. 
+> Those languages grow lists dynamically, while Go gives you more control and efficiency under the hood.
 
 ### ✅ Tasks:
 
