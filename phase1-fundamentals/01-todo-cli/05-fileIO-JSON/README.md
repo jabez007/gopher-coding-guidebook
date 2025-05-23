@@ -12,7 +12,7 @@ By the end of this lesson, you will be able to:
 
 ---
 
-## 📂 Section 1: Basic File Operations in Go
+## 📂 Basic File Operations in Go
 
 ### 🧠 Concept Overview
 
@@ -64,6 +64,10 @@ defer file.Close()
 _, err = file.WriteString("\n3. Write tests")
 ```
 
+<details>
+  <summary>solution</summary>
+</details>
+
 ##### 🧵 What's `defer` doing here?
 
 * The `defer` keyword postpones the execution of a function until the surrounding function returns.
@@ -101,7 +105,7 @@ third
 
 ---
 
-## 📟 Section 2: JSON in Go
+## 📟 JSON in Go
 
 ### 🧠 Concept Overview
 
@@ -196,6 +200,10 @@ Create a file named `json_tasks.go`. Practice defining and handling JSON:
 5. 📂 Read from `tasks.json`
 6. 📅 Unmarshal back to a Go slice
 7. 💖 Loop through and print formatted output
+
+<details>
+  <summary>solution</summary>
+</details>
 
 ---
 
