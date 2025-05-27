@@ -1,0 +1,17 @@
+[
+  {
+    "id": 1,
+    "title": "Learn Go JSON",
+    "description": "Understand JSON marshaling and unmarshaling",
+    "due_date": "2025-05-21T09:48:58.167175827-05:00",
+    "completed": false,
+    "priority": 1
+  },
+  {
+    "id": 2,
+    "title": "Build task manager",
+    "due_date": "2025-05-23T09:48:58.167176912-05:00",
+    "completed": false,
+    "priority": 2
+  }
+]
